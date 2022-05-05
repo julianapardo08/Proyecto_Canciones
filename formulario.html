@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="shortcut icon" href="#">
+<link rel="stylesheet" href="./css/style.css">
+<title>Canciones</title>
+</head>
+<body>
+<header>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-2 col-sm-6 col-lg-2">
+				<h1>
+					<img src="imagenes/logo.png">
+				</h1>
+			</div>
+			<div class="col-7 text-center">
+				<ul class="nav justify-content-center mt-2">
+					<li class="nav-item">
+						<a class="nav-link" href="index.html">Inicio</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="canciones.html">Canciones</a>
+					</li>
+				</ul>
+			</div>
+			<div class="col-3 text-center">
+				<button class="btn btn-primary mt-2"  type="button" data-toggle="modal" data-target="#ventana">Contacto</button>
+					<div class="modal" tabindex="-1" role="dialog" id="ventana">
+						<div class="modal-dialog" role="document">
+							<div class="modal-content">
+
+							<div class="modal-header">
+								<h5 class="modal-title">Contacto</h5>
+								<button type="button" class="close" data-dismiss="modal">
+								<span aria-hidden="true">&times;</span>
+								</button>
+							</div>
+
+							<div class="modal-body">
+								<p>info@contactame.com</p>
+								<p class="text-primary">+57 315555555</p>
+							</div>
+
+							<div class="modal-footer">
+								<button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+							</div>
+
+						</div>
+					</div>
+				</div>
+				<a href="login.html"><button class="btn btn-primary mt-2 btn-menu">Inicio de Sesión</button></a>
+				<a href="formulario.html"><button class="btn btn-primary mt-2 btn-menu">Registro</button></a>
+			</div>
+			<div class="menu col-10 col-sm-6 ">
+				<img src="imagenes/menu.png" onclick="return menuHamburguesa()">
+			</div>
+			<div id="menu-hamburguesa">
+			</div>
+		</div>
+	</div>
+</header>
+<main class="bg-light">
+	<div class="container">
+			<h1>REGISTRO</h1>
+			<hr>
+			<form action="">
+				<p>
+					<label >Correo electrónico *</label>
+					<input class="form-control" type="text" name="email" id="email">
+					<span class="valor" id="valor"></span>
+				</p>
+
+				<p>
+					<label>Contraseña *</label>
+					<input class="form-control" type="password" name="contrasena" id="contrasena">
+					<span class="valor" id="valor2"></span>
+				</p>
+
+
+				<p>
+					<label>Confirmación de contraseña *</label>
+					<input class="form-control" type="password" name="confirmacion" id="confirmacion">
+					<span class="valor" id="valor3"></span>
+				</p>
+
+
+				<p>
+					<label>Género musical favorito *</label>
+					<select class="form-control"  name="genero" id="genero">
+					<option value="">Seleccione...</option>
+					<option value="1">Rock</option>
+					<option value="2">Balada</option>
+					<option value="3">Salsa</option>
+					<option value="4">Otro</option>
+					</select>
+					<span class="valor" id="valor4"></span>
+				</p>
+
+
+				<div>
+					<p>Edad *</p>
+					<span class="valor" id="valor5"></span>
+					<div class="form-check">
+						<input class="form-check-input" type="radio" name="edad" id="menor" value="menor">
+						<label class="form-check-label" for="menor">Menor a 20</label>
+					</div>
+					<div class="form-check">
+						<input class="form-check-input" type="radio" name="edad" id="medio" value="medio">
+						<label class="form-check-label" for="medio">20 a 40</label>
+					</div>
+					<div class="form-check">
+						<input class="form-check-input" type="radio" name="edad" id="mayor" value="mayor">
+						<label class="form-check-label" for="mayor">Mayor a 50</label>
+					</div>
+				</div>
+				<br>
+				<div class="form-check">
+					<label class="form-check-label" for="terminos">
+					<input class="form-check-input"  type="checkbox" name="terminos" id="terminos" value="acepta"> Acepto los términos de uso *</label>
+				</div>
+				<span class="valor" id="valor6"></span>
+
+				<br>
+				<p class="text-info">
+					*Campos obligatorios
+				</p>
+
+				<p>
+					<input class="btn btn-primary" type="submit" value="Continuar" onclick="return validar(this.form)">
+				</p>
+			</form>
+		</div>
+	</div>
+</main>
+<footer class="bg-primary">
+	<div>Comparté la música</div>
+	<div>Derechos reservados@</div>
+</footer>
+<script src="./js/script.js"></script>
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+
+</html>
+
+

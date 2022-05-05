@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Anek+Tamil:wght@700&display=swap');
+
+*{
+	margin:0;
+	padding: 0;
+	font-family: 'Anek Tamil', 'sans-serif';
+}
+header{
+	background-color: #ffffff;
+}
+header div div div.menu{
+	display:none;
+}
+main .container-main main{
+	background-color: #e4e8ee;
+}
+.main-text{
+	padding-top: 50px;
+}
+.main-text h2{
+	font-size: 3rem;
+}
+.sliders{
+	overflow: hidden;
+}
+.slider{
+	width: 1280px;
+	height: auto;
+	margin: 50px auto 0;
+	animation: slide 3s infinite alternate ease-in-out;
+}
+.slider ul{
+	display: flex;
+}
+.slider li{
+	list-style-type: none;
+	width: 700px;
+}
+.slider img{
+	margin: 1px;
+	width:500px;
+}
+.size{
+	display: block;
+	width: 100px;
+	margin: 0 auto;
+
+}
+.card-body{
+	text-align: center;
+}
+
+
+@keyframes slide{
+	50%{margin-left: 0%;}
+	100%{margin-left: 0%;}
+
+	100%{margin-left: -120%;}
+	50%{margin-left: -0%;}
+
+}
+.valor{
+	color:red;
+}
+footer{
+	display: flex;
+	justify-content: space-between;
+}
+footer div:nth-child(1){
+	width: 50%;
+	color: #ffffff;
+}
+footer div:nth-child(2){
+	display: flex;
+	justify-content: flex-end;
+	width: 50%;
+	color: #ffffff;
+}
+#menu-hamburguesa{
+	display: none;
+}
+
+
+@media (max-width:558px){
+	header div div div:nth-of-type(2){
+		display:none;
+	}
+	header div div div:nth-of-type(3){
+		display:none;
+	}
+	header div div div.menu{
+		display:flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: flex-end;
+	}
+	header div div div.menu img{
+		width: 30px;
+	}
+	.name{
+		display:none;
+	}
+	#menu-hamburguesa{
+		display: block;
+	}
+	.btn-menu{
+		display: block;
+	}
+}
+@media (max-width:1180px){
+	.name{
+		text-align: center;
+	}
+	.btn-menu{
+		display: none;
+	}
+	.audio{
+		width: 250px;
+	}
+}
